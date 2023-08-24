@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="refresh" content="5;url=/record">
+    <title>Recorder</title>
+
+    <style>
+        :root {
+            --surface-a: #2a323d;
+            --surface-b: #20262e;
+            --surface-c: rgba(255, 255, 255, .04);
+            --surface-d: #3f4b5b;
+            --surface-e: #2a323d;
+            --surface-f: #2a323d;
+            --text-color: rgba(255, 255, 255, .87);
+            --text-color-secondary: rgba(255, 255, 255, .6);
+            --primary-color: #8dd0ff;
+            --primary-color-text: #151515;
+            --font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+            --surface-0: #20262e;
+            --surface-50: #363c43;
+            --surface-100: #4d5158;
+            --surface-200: #63676d;
+            --surface-300: #797d82;
+            --surface-400: #909397;
+            --surface-500: #a6a8ab;
+            --surface-600: #bcbec0;
+            --surface-700: #d2d4d5;
+            --surface-800: #e9e9ea;
+            --surface-900: #ffffff;
+            --gray-50: #e9e9ea;
+            --gray-100: #d2d4d5;
+            --gray-200: #bcbec0;
+            --gray-300: #a6a8ab;
+            --gray-400: #909397;
+            --gray-500: #797d82;
+            --gray-600: #63676d;
+            --gray-700: #4d5158;
+            --gray-800: #363c43;
+            --gray-900: #20262e;
+            --content-padding: 1.25rem;
+            --inline-spacing: .5rem;
+            --border-radius: 4px;
+            --surface-ground: #20262e;
+            --surface-section: #20262e;
+            --surface-card: #2a323d;
+            --surface-overlay: #2a323d;
+            --surface-border: #3f4b5b;
+            --surface-hover: rgba(255, 255, 255, .04);
+            --maskbg: rgba(0, 0, 0, .4);
+            --focus-ring: 0 0 0 1px #e3f3fe;
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--surface-ground);
+            color: var(--surface-500);
+            font-family: Roboto, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dots-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 0 4px;
+            display: inline-block;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dots-container" style="text-align: center;">
+        <h1 style="font-size: 24px; font-weight: bold; margin-left: 0px;">Vérification</h1>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+
+    </div>
+
+    <style>
+        @keyframes changeColor {
+            0% {
+                background-color: forestgreen;
+            }
+
+            25% {
+                background-color: dodgerblue;
+            }
+
+            50% {
+                background-color: coral;
+            }
+
+            75% {
+                background-color: gold;
+            }
+
+            100% {
+                background-color: violet;
+            }
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 0 4px;
+            display: inline-block;
+            animation: pulse 1s infinite alternate, changeColor 5s linear infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+    </style>
+</body>
+
+</html>
